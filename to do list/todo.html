@@ -1,0 +1,118 @@
+
+<!---------------------------------------------------------------------------------------------------------------
++ JAVASCRIPT PROJECT
++ Project Title      :  ToDo list
++ Title              :  generate ToDo list 
++ Start Date         :  13/june/2020
++ End Date           :  
+------------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ToDo list</title>
+	<!--
+		style sheet link and  links for fontawsomes
+	-->
+	<link rel="stylesheet" href="todo.css" type="text/css">
+	<link rel="stylesheet" href="./fontawesome-free-5.13.0-web\css\all.css" type="text/css">
+	<link rel="stylesheet" href="./fontawesome-free-5.13.0-web\css\fontawesome.min.css" type="text/css">
+	<!---
+	external script link
+	-->
+	<script src="todo.js"></script>
+	
+</head>
+<body>
+	<i class=""></i>
+<!--parent div-->
+<div id="main">
+	<!--
+	title and search section
+	-->
+<div id="header"> 
+<h2>To Do</h2>
+<p class="search_item"><input type="text" id="search_text" ><button onclick="searchme();">Search</button><p>
+</div>
+<!--
+	filter option for view all complete reminder or incomplete reminder
+	-->
+<div id="filter">
+	<p>
+		<button class="btn filter_btn" onclick="viewall();">ALL</button>
+		<button class="btn filter_btn" onclick="viewcomplete();">COMPLETE</button>
+		<button class="btn filter_btn" onclick="viewincomplete();">INCOMPLETE</button>
+	</p>
+	</div>
+	<!--
+		form for to set the description date time of reminder
+		--->
+<div id="todoform"
+			<form>
+				<h3 id="tasktitle"></h3>
+		Description:<input type="text" placeholder="description" class="inp" required id="description"><br>
+		Date       :  <input type="date" class="inp" required id="date"><br>
+		Time      :<input type="time" class="inp" required id="time"><br>
+		<input type="reset" value="RESET" class="btn1">
+		<p onclick="setall();" class="btn1">Set Reminder</p>
+		<p onclick="backme();" class="btn1">Go Back</p>
+	</form>
+	</div>
+<div id="list">
+	<!--
+	adding new reminder title
+	-->
+	<div class="additem" id="additem">
+		<p><input type="text" placeholder="what else need to be done?" id="addtext" list="newadd">
+			<!--
+				create auto complete option list
+			-->
+			<datalist id="newadd">
+				<option value="Exersize"></option> 
+				<option value="Learn Node js"></option>
+				<option value="Do the  shopping"></option>
+				<option value="wake up in morning"></option>
+				<option value="meeting"></option>
+				<option value="pick up someone"></option>
+				<option value="drop someone"></option>
+				<option value="study"></option>
+				<option value="guest comming"></option>
+				<option value="weekend plane"></option>
+				<option value="prepare Dinner"></option>
+				<option value="go to school/collage/office"></option>
+				<option value="recharge expire"></option>
+				<option value="medical apointment"></option>
+				<option value="exam"></option>
+				<option value="marriage/other function"></option>
+				<option value="treaking/longdrive"></option>
+				<option value="family time	"></option>
+				
+
+
+
+			</datalist>
+			<button onclick="additem();" class="btn"><i class="fa fa-plus" ></i>ADD!</button><p>
+	</div>
+<div>
+	<!--
+	creatin updatind or view a table data 
+	-->
+<table id="mytable">
+<tr>
+<td><input type="checkbox" checked id="complete" disabled></td> 
+<td class='todo_item'>COOK Asian Dinner<span id="description_set"></span><span id="date_set"></span><span id="time_set"></span></td> 
+<!--<td><button id="edit" onclick="edit(this);" class="btn"><i class="fa fa-edit"></i></button></td>--> 
+<td><button id='edit' onclick='edit(this);'class='btn'><i class='fa fa-edit'></i></button></td>
+<td><button id="delete" onclick="deleteme(this);" class="btn">Delete</button></td>
+</tr>
+
+<tr>
+<td><input type="checkbox" checked id="complete" disabled></td> 
+<td class='todo_item'>COOK Asian Dinner1<span id="description_set"></span><span id="date_set"></span><span id="time_set"></span></td> 
+<td><button id="edit" onclick="edit(this);" class="btn"><i class="fa fa-edit"></i></button></td> 
+<td><button id="delete" onclick="deleteme(this);" class="btn">Delete</button></td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>

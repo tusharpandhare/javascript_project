@@ -1,0 +1,71 @@
+body {
+  background-color: #90ffff;
+}
+/* main container*/
+#container {
+	text-align:center;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-family:cursive;
+}
+/* find the penguin game title*/
+#title {
+  font-size: 15px;
+  transition: 0.5s linear;
+  display: inline-block;
+  width: 100%;
+  height: 1vw;
+  
+  text-shadow: 2px 6px 1px rgba(255, 255, 255, 0.7);
+}
+/* 
+game container contains penguin images
+*/
+#gamesection{
+	width:80%;
+	height:auto;
+	display:block;
+	position:absolute;
+	left:50%;
+	transform:translate(-50%);
+	margin-top:1vw;
+	
+	
+}
+/* division to resides penguin picture as background*/
+.penguins{
+	width:21vw;
+	height:13vw;
+	
+	display:block;
+	float:left;
+	margin:2vw;
+	background:url("./images/cloude.png");
+	background-position:center;
+	background-size:cover;
+
+}
+/* if player clicks on yeti image*/
+.roar{
+			text-align:center;
+			font-size:7vw;
+			padding:0;
+			margin:0;
+		}
+		/*positioning yeti image */
+		.imgyeti{
+			display:block;
+			position:relative;
+			float:right;
+			top:10vw;
+		}
+		/* start new game button*/
+		.newgame{
+			position:relative;
+			left:50%;
+			transform:translate(-50%);
+			margin:4vw 0;
+			font-size:3vw;
+		}

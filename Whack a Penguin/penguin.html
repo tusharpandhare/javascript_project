@@ -1,0 +1,117 @@
+<!-------------------------------------------------------------------------
++  JAVASCRIPT PROJECT
++  Project Title:Whack a penguin
++  Name: Tushar Arjun Pandhare
++  Start Date:3/july/2020
++  End Date: 6/july/2020
+
+
+-------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whack a Penguin</title>
+	<link rel="stylesheet" href="mystyle.css" type="text/css">	
+</head>
+<body>
+	<!--
+	main container
+	-->
+	 <div id="container">
+    <div id="title">
+      <h1>Find Penguins Game</h1>
+    </div>
+    <!--differnt division container for penguin-->
+    <div id="gamesection">
+      <div class="penguins"></div>
+      <div class="penguins"></div>
+      <div class="penguins"></div>
+      <div class="penguins"></div>
+      <div class="penguins"></div>
+      <div class="penguins"></div>
+      <div class="penguins"></div>
+      <div class="penguins"></div>
+      <div class="penguins"></div>
+    </div>
+  </div>
+  <script>
+
+  	var arr=[0,1,2,3,4,5,6,7,8];
+  	// get non-repeating random number from arr[];
+	ranNums=[];
+	i=arr.length;
+	j=0;
+	while(i--)
+	{
+		j=Math.floor(Math.random()*(i+1));
+		ranNums.push(arr[j]);
+		arr.splice(j,1);
+	}
+	//image location array
+  var imagearray=[
+  './images/penguin0.png',
+  './images/penguin1.png',
+  './images/penguin2.png',
+  './images/penguin3.png',
+  './images/penguin4.png',
+  './images/penguin5.png',
+  './images/penguin6.png',
+  './images/penguin7.png',
+  './images/yeti.png'
+  ];
+
+  	var parent=document.getElementById("gamesection");
+  	var classes=document.getElementsByClassName("penguins");
+ 
+
+//on hover 
+function changeme(e){
+	//console.log("'"+imagearray[4]+"'")
+	//e.style.backgroundImage="url("+imagearray[2]+")";
+	e.style.backgroundImage="url('./images/mound_hover.png')";
+}
+//set the inition background image
+function changeout(e){
+	e.style.backgroundImage="url('./images/cloude.png')";
+}
+//onclick display the hidden penguin
+function hiddenimg(e){
+	//console.log(getclass.findIndex(e));
+	var y=document.getElementById("gamesection");
+	
+		for(var i=0;i<y.children.length;i++)
+		{
+			if(y.children[i]===e)
+			{
+				var c=ranNums[i];
+				//console.log(imagearray[c]);
+				//checking condition for yeti
+			if(imagearray[c]=='./images/yeti.png')
+			{
+				window.open("yeti.html","_blank");
+				window.close();
+				//alert("yeti");
+			}
+			else
+			{e.style.backgroundImage="url("+imagearray[c]+")";}
+		
+				
+				
+			}
+		}
+}
+//get the penguin class array
+var classesme=document.getElementsByClassName("penguins");
+for(var i in classesme)
+{
+	//onclick function to display hidden image
+	classesme[i].setAttribute("onclick","hiddenimg(this)");
+	//mouse hover to display "?"
+	classesme[i].setAttribute("onmouseover","changeme(this)");
+	//onmouse out back to previous position
+	classesme[i].setAttribute("onmouseout","changeout(this)");
+	
+}
+  </script>
+</body>
+</html>

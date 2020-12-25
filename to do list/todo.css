@@ -1,0 +1,146 @@
+*{
+	padding:0;
+	margin:0;
+	display:border-box;
+}
+body{
+	background-color:gray;
+	z-index:1;
+}
+/* todo heading*/
+#header{
+	width:100%;
+	height:5vw;
+	background-color:orange;
+	
+}
+
+#header h2{
+	color:white;
+	text-align:center;
+	position:relative;
+	float:left;
+	margin-left:15vw;
+	text-shadow:1px 1px 2px gray;
+	font-size:4vw;
+}
+#list{
+	display:block;
+	position:relative;
+	width:70vw;
+	height:auto;
+	padding:1vw;
+	background-color:white;
+	margin-top:1vw;
+	margin-left:50%;
+transform:translate(-50%);
+text-align:center;
+z-index:12;
+}
+table{
+	width:100%;
+	border:1px solid silver;
+	padding:1px;
+	border-collapse:collapse;
+}
+.additem{
+	box-sizing:padding-box;
+	position:relative;
+	margin-bottom:1vw;
+	background-color:gray;
+	padding:1vw;
+}
+.additem input{
+	width:50%;
+}
+td{
+	padding:0.5vw;
+}
+tr{
+    margin:10px;
+	height:1.5vw;
+	background-color:silver;
+	border-bottom:1px solid white;
+}
+#complete{
+	visibility:hidden;
+}
+ input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px green;
+          
+        }
+.btn{
+	border:none;
+	background-color:transparent;
+	color:white;
+}
+.btn:hover{
+	color:red;
+
+}
+#todoform{
+	display:inline-block;
+	position:absolute;
+	width:100%;
+	background-color:white;
+	visibility:hidden;
+	z-index:12;
+	right:50%;
+	transform:translate(50%);
+	padding:1vw;
+	margin-top:-1vw;
+	z-index:99;
+}
+form{
+	padding:0 20%;
+	text-align:left;
+}
+.inp{
+	margin:1vw;
+	margin-left:3vw;
+}
+.btn1{
+	display:inline;
+	float:left;
+	padding:0.2vw;
+	border:1px solid black;
+	background-color:gray;
+	margin:1vw;
+	
+
+}
+.todo_item{
+	position:relative;
+}
+#description_set,#date_set,#time_set{
+	position:absolute;
+	visibility:hidden;
+	
+}
+.search_item{
+	display:block;
+	float:right;
+	margin-right:15vw;
+	padding-top:1%;
+}
+.search_item input{
+	border:none;
+}
+.search_item button{
+	background-color:white;
+	border:none;
+}
+#filter{
+	background-color:silver;
+	padding:1vw 0;
+	margin-top:1vw;
+	z-index:10;
+}
+#filter p{
+	text-align:center;
+}
+.filter_btn{
+	padding:0 2vw;
+	color:black;
+	font-weight:bolder;
+}
